@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>AWS Test</title>
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/responsive.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="absolute-center is-responsive">
+                    <div class="main-body">
+                        <div class="section border-bottom">
+                            <div class="">
+                                <div class="section-title ">
+                                   <a href=""><span class="back-navigation"><i class="fa fa-angle-left" aria-hidden="true"></i></span></a><span>date and time</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-section container"> 
+                            <div>
+                                <div>
+                                    <p class="sub-section-title">Automatic date and time</p>
+                                </div>  
+                                <div class="sub-section-info-container">
+                                    <p >Use the date, time and time zone provided by your network. Disable this function to set the date, time and time-zone manually</p>
+                                     
+                                </div>
+                                <div class="sub-section-checkbox-container">
+                                    <label class="switch">
+                                        <input type="checkbox"><span class="slider round"></span>
+                                    </label> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-section container"> 
+                            <div>
+                                <div>
+                                    <p class="sub-section-title">Set date</p>
+                                </div>  
+                                <div class="sub-section-info-container">
+                                    <p class="sub-section-highlighted-text"><span id="today">18 January 2018</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sub-section container"> 
+                            <a href="#" data-toggle="modal" data-target=".bs-modal-sm" onclick="setHoursAndMinutes();">
+                                <div id="set-time">
+                                    <div>
+                                        <p class="sub-section-title">Set Time</p>
+                                    </div>  
+                                    <div class="sub-section-info-container">
+                                        <p class="sub-section-highlighted-text"><span id="currentTime"></span></p>
+                                       <span></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="sub-section container"> 
+                            <div>
+                                <div>
+                                    <p class="sub-section-title">Select time zone</p>
+                                </div>  
+                                <div class="sub-section-full-container">
+                                    <p class="sub-section-highlighted-text">GMT+01:00 Central European Standard Time</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub-section container"> 
+                            <div>
+                                <div>
+                                    <p class="sub-section-title">Use 24-hour format</p>
+                                </div>  
+                                <div class="sub-section-info-container">
+                                    <p>1:00 PM</p>
+                                     
+                                </div>
+                                <div class="sub-section-checkbox-container">
+                                    <label class="switch">
+                                        <input type="checkbox" checked="checked" id="hour-format" onclick="setTimeFormat();"><span class="slider round"></span>
+                                    </label> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade bs-modal-sm" id="myModal" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <div class="sub-section container"> 
+                                            <div>
+                                                <p class="sub-section-title extrabold">Set time</p>
+                                            </div>
+                                        </div>
+                                        <div class="scroller-wrapper" id="scroller-wrapper">
+                                            <div class="scroller-div" id="scroller-div">
+                                                <div class="date-field" id="date-field">
+                                                    <div class="date-list" id="hours-list">
+                                                       
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="seperator-div">
+                                                <div class="seperator">:</div>
+                                            </div>
+
+                                            <div class="scroller-div">
+                                                <div class="date-field">
+                                                    <div class="date-list" id="minute-list">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="scroller-div">
+                                                <div class="ampm-field">
+                                                    <div class="ampm-list" id="ampm-list">
+                                                        <div>&nbsp;</div>
+                                                        <div class="ampm" id="am">am</div>
+                                                        <div class="ampm" id="pm">pm</div>
+                                                        <div>&nbsp;</div>
+                                                        <div>&nbsp;</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" name="hour" id="hiden-hour" value="" >
+                                    <input type="hidden" name="minute" id="hidden-minute" value="" >
+                                    <input type="hidden" name="ampm" id="hidden-ampm" value="" >
+                                    <div style="text-align: right;">
+                                        <div class="confirmation-text"><span><a href="">Cancel</a></span> <span><a href="" onclick="updateClock();">Done</a></span> </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+            </div>
+            
+
+            
+            
+        
+       </main>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
